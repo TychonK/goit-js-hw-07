@@ -16,6 +16,7 @@ const btnAdd = document.querySelector('[data-action="render"]');
 btnAdd.addEventListener("click", createBoxes);
 
 function createBoxes() {
+    destroyBoxes();
     for (let i = 0; i < amount; i++) {
         let addition = document.createElement('div');
         box.appendChild(addition)

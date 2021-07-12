@@ -14,10 +14,12 @@ const images = [
 ];
 
 const list = document.querySelector('ul#gallery');
-
-images.forEach((image) => {
-  list.insertAdjacentHTML('afterbegin', "<li><img></li>");
-});
+let element = "";
+images.forEach(function () {
+  element += "<li><img></li>"
+  console.log(element)
+})
+list.insertAdjacentHTML("afterbegin", element)
 
 const gallery = list.querySelectorAll('li');
 for (let i = 0; i < gallery.length; i++) {

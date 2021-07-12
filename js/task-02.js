@@ -8,13 +8,13 @@ const ingredients = [
 ];
 
 const list = document.querySelector('ul#ingredients');
-console.log(list);
 
-ingredients.forEach(function (ingredient) {
-  var li = document.createElement('li');
+let elements = ingredients.map(ingredient => {
+  let li = document.createElement("li");
   li.textContent = ingredient;
-  list.appendChild(li);
-    }
-  );
+  return li;
+});
+console.log(elements)
+  list.append(...elements)
 
 
